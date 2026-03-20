@@ -57,7 +57,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], # Default to allow all for easy hosting
+    allow_origins=[
+        "http://localhost:5173",
+        "https://digitsense-ai-2pvq.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
